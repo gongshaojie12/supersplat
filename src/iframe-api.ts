@@ -1,5 +1,6 @@
 import i18next from 'i18next';
 import { Events } from './events';
+import { setWatermarkVisible } from './ui/watermark';
 
 // 消息类型常量
 const MSG_PREFIX = 'splat3d:';
@@ -10,6 +11,7 @@ const SET_BRAND = `${MSG_PREFIX}set-brand`;
 const SAVE_REQUEST = `${MSG_PREFIX}save-request`;
 const READY = `${MSG_PREFIX}ready`;
 const DIRTY_STATE = `${MSG_PREFIX}dirty-state`;
+const SET_WATERMARK = `${MSG_PREFIX}set-watermark`;
 
 // ---- 查询/响应接口 ----
 
@@ -46,6 +48,11 @@ interface SaveRequestMessage {
     type: typeof SAVE_REQUEST;
 }
 
+interface SetWatermarkMessage {
+    type: typeof SET_WATERMARK;
+    visible: boolean;
+}
+
 // ---- 编辑器 → 外壳 ----
 
 interface ReadyMessage {
@@ -76,6 +83,10 @@ const isSetBrandMessage = (data: any): data is SetBrandMessage => {
 
 const isSaveRequestMessage = (data: any): data is SaveRequestMessage => {
     return data?.type === SAVE_REQUEST;
+};
+
+const isSetWatermarkMessage = (data: any): data is SetWatermarkMessage => {
+    return data?.type === SET_WATERMARK && typeof data.visible === 'boolean';
 };
 
 const registerIframeApi = (events: Events) => {
@@ -121,6 +132,12 @@ const registerIframeApi = (events: Events) => {
                     appLabel.textContent = data.name;
                 }
             }
+            return;
+        }
+
+        // 设置水印可见性
+        if (isSetWatermarkMessage(data)) {
+            setWatermarkVisible(data.visible);
             return;
         }
 
