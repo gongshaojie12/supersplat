@@ -3,6 +3,7 @@ import { Container, Element, Label } from '@playcanvas/pcui';
 import { Events } from '../events';
 import { recentFiles } from '../recent-files';
 import { ShortcutManager } from '../shortcut-manager';
+import i18next from 'i18next';
 import { localize } from './localization';
 import { MenuPanel, MenuItem } from './menu-panel';
 import arrowSvg from './svg/arrow.svg';
@@ -87,6 +88,11 @@ class Menu extends Container {
             class: 'menu-option'
         });
 
+        const language = new Label({
+            text: localize('menu.language'),
+            class: 'menu-option'
+        });
+
         const toggleCollapsed = () => {
             document.body.classList.toggle('collapsed');
         };
@@ -113,6 +119,7 @@ class Menu extends Container {
         buttonsContainer.append(selection);
         buttonsContainer.append(render);
         buttonsContainer.append(help);
+        buttonsContainer.append(language);
         buttonsContainer.append(collapse);
         buttonsContainer.append(arrow);
 
@@ -323,6 +330,41 @@ class Menu extends Container {
             onSelect: () => events.fire('show.about')
         }]);
 
+        const languageNames: Record<string, string> = {
+            'ar': 'العربية',
+            'de': 'Deutsch',
+            'en': 'English',
+            'es': 'Español',
+            'fr': 'Français',
+            'hi': 'हिन्दी',
+            'id': 'Bahasa Indonesia',
+            'it': 'Italiano',
+            'ja': '日本語',
+            'ko': '한국어',
+            'nl': 'Nederlands',
+            'pl': 'Polski',
+            'pt-BR': 'Português (BR)',
+            'ru': 'Русский',
+            'sv': 'Svenska',
+            'th': 'ไทย',
+            'tr': 'Türkçe',
+            'vi': 'Tiếng Việt',
+            'zh-CN': '简体中文',
+            'zh-TW': '繁體中文'
+        };
+
+        const languageMenuItems: MenuItem[] = Object.entries(languageNames).map(([code, name]) => ({
+            text: name,
+            extra: i18next.language === code ? '✓' : '',
+            onSelect: () => {
+                i18next.changeLanguage(code).then(() => {
+                    window.location.reload();
+                });
+            }
+        }));
+
+        const languageMenuPanel = new MenuPanel(languageMenuItems);
+
         this.append(menubar);
         this.append(fileMenuPanel);
         this.append(openRecentMenuPanel);
@@ -331,6 +373,7 @@ class Menu extends Container {
         this.append(renderMenuPanel);
         this.append(videoTutorialsMenuPanel);
         this.append(helpMenuPanel);
+        this.append(languageMenuPanel);
 
         const options: { dom: HTMLElement, menuPanel: MenuPanel }[] = [{
             dom: scene.dom,
@@ -344,6 +387,9 @@ class Menu extends Container {
         }, {
             dom: help.dom,
             menuPanel: helpMenuPanel
+        }, {
+            dom: language.dom,
+            menuPanel: languageMenuPanel
         }];
 
         options.forEach((option) => {
