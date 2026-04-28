@@ -24,6 +24,7 @@
 @use 'timeline-panel.scss';
 @use 'status-bar.scss';
 @use 'tool.scss';
+@use 'splat3d-theme.scss';
 
 * {
     font-size: 12px;
@@ -215,25 +216,25 @@ body {
 }
 
 .font-thin {
-    font-family: 'Proxima Nova Thin', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
     font-style: normal;
 }
 
 .font-light {
-    font-family: 'Proxima Nova Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
     font-style: normal;
 }
 
 .font-regular {
-    font-family: 'Proxima Nova Regular', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-style: normal;
 }
 
 .font-bold {
-    font-family: 'Proxima Nova Bold', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
     font-style: normal;
 }

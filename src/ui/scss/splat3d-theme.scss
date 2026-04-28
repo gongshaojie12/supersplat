@@ -1,0 +1,36 @@
+@use 'colors.scss' as *;
+
+// Splat3D 品牌字体
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// 全局字体覆盖
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+// 品牌版本标签样式
+#app-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// 菜单栏高亮状态
+.menu-option:hover {
+    color: $clr-hilight !important;
+}
+
+// 滚动条品牌色
+::-webkit-scrollbar-thumb:hover {
+    background: $clr-hilight;
+}
+
+// 选中状态的工具栏按钮
+#coord-space-toggle.active {
+    background-color: $bcg-dark !important;
+    color: $clr-hilight;
+}
