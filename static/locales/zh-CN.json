@@ -277,5 +277,7 @@
     "status-bar.timeline": "时间线",
     "status-bar.splat-data": "高斯点数据",
     "tooltip.status-bar.timeline": "切换时间线面板",
-    "tooltip.status-bar.splat-data": "切换高斯点数据面板"
+    "tooltip.status-bar.splat-data": "切换高斯点数据面板",
+    "menu.language": "语言",
+    "menu.language.current": "当前: {{lang}}"
 }

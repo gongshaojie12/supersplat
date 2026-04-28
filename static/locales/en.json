@@ -277,5 +277,7 @@
     "status-bar.timeline": "Timeline",
     "status-bar.splat-data": "Splat Data",
     "tooltip.status-bar.timeline": "Toggle Timeline Panel",
-    "tooltip.status-bar.splat-data": "Toggle Splat Data Panel"
+    "tooltip.status-bar.splat-data": "Toggle Splat Data Panel",
+    "menu.language": "Language",
+    "menu.language.current": "Current: {{lang}}"
 }

@@ -277,5 +277,7 @@
     "status-bar.timeline": "タイムライン",
     "status-bar.splat-data": "スプラットデータ",
     "tooltip.status-bar.timeline": "タイムラインパネルの切り替え",
-    "tooltip.status-bar.splat-data": "スプラットデータパネルの切り替え"
+    "tooltip.status-bar.splat-data": "スプラットデータパネルの切り替え",
+    "menu.language": "言語",
+    "menu.language.current": "現在: {{lang}}"
 }

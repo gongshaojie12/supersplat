@@ -277,5 +277,7 @@
     "status-bar.timeline": "Zeitleiste",
     "status-bar.splat-data": "Splat-Daten",
     "tooltip.status-bar.timeline": "Zeitleisten-Panel umschalten",
-    "tooltip.status-bar.splat-data": "Splat-Daten-Panel umschalten"
+    "tooltip.status-bar.splat-data": "Splat-Daten-Panel umschalten",
+    "menu.language": "Sprache",
+    "menu.language.current": "Aktuell: {{lang}}"
 }

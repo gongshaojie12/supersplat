@@ -277,5 +277,7 @@
     "status-bar.timeline": "Chronologie",
     "status-bar.splat-data": "Données Splat",
     "tooltip.status-bar.timeline": "Afficher/Masquer le panneau Chronologie",
-    "tooltip.status-bar.splat-data": "Afficher/Masquer le panneau Données Splat"
+    "tooltip.status-bar.splat-data": "Afficher/Masquer le panneau Données Splat",
+    "menu.language": "Langue",
+    "menu.language.current": "Actuelle : {{lang}}"
 }

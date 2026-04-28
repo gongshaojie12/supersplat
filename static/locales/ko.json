@@ -277,5 +277,7 @@
     "status-bar.timeline": "타임라인",
     "status-bar.splat-data": "스플랫 데이터",
     "tooltip.status-bar.timeline": "타임라인 패널 전환",
-    "tooltip.status-bar.splat-data": "스플랫 데이터 패널 전환"
+    "tooltip.status-bar.splat-data": "스플랫 데이터 패널 전환",
+    "menu.language": "언어",
+    "menu.language.current": "현재: {{lang}}"
 }

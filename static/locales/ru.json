@@ -277,5 +277,7 @@
     "status-bar.timeline": "Временная шкала",
     "status-bar.splat-data": "Данные сплатов",
     "tooltip.status-bar.timeline": "Переключить панель временной шкалы",
-    "tooltip.status-bar.splat-data": "Переключить панель данных сплатов"
+    "tooltip.status-bar.splat-data": "Переключить панель данных сплатов",
+    "menu.language": "Язык",
+    "menu.language.current": "Текущий: {{lang}}"
 }

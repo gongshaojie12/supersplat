@@ -277,5 +277,7 @@
     "status-bar.timeline": "Linha do Tempo",
     "status-bar.splat-data": "Dados de Splat",
     "tooltip.status-bar.timeline": "Alternar painel de Linha do Tempo",
-    "tooltip.status-bar.splat-data": "Alternar painel de Dados de Splat"
+    "tooltip.status-bar.splat-data": "Alternar painel de Dados de Splat",
+    "menu.language": "Idioma",
+    "menu.language.current": "Atual: {{lang}}"
 }
